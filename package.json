@@ -10,7 +10,7 @@
     }
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack serve --mode development --open Firefox"
@@ -19,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "classnames": "^2.2.6",
     "identity-obj-proxy": "^3.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-react-jsx-source": "^7.12.1",
     "@babel/preset-env": "^7.12.10",
     "@babel/preset-react": "^7.12.10",
     "@testing-library/react": "^11.2.2",
@@ -42,6 +44,7 @@
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
     "postcss-preset-env": "^6.7.0",
+    "prop-types": "^15.7.2",
     "react-test-renderer": "^17.0.1",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
