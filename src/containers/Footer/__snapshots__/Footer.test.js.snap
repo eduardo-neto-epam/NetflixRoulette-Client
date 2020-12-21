@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div>
+    <span
+      className="brand brand--bold"
+    >
+      netflix
+    </span>
+    <span
+      className="brand"
+    >
+      roulette
+    </span>
+  </div>
+</div>
+`;

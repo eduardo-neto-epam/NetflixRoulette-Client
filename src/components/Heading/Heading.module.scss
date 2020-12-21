@@ -1,0 +1,11 @@
+.heading {
+    display: block;
+    width: var(--content-max-width);
+    margin: 40px auto;
+    color: var(--color-contrast);
+    font-family: var(--font-main);
+    font-weight: var(--weight-light);
+    font-size: 68px;
+    line-height: 150%;
+    letter-spacing: 3px;
+}

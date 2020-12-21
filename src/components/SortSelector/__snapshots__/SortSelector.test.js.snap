@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortSelector renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="_inner"
+  >
+    <div
+      className="label"
+    >
+      SORT BY
+    </div>
+    <div
+      className="selected-method"
+      data-testid="selected-method"
+      onClick={[Function]}
+    >
+      release date
+    </div>
+  </div>
+  <ul
+    className="options-container"
+  >
+    <li
+      className="option"
+      onClick={[Function]}
+    >
+      release date
+    </li>
+    <li
+      className="option"
+      onClick={[Function]}
+    >
+      movie title
+    </li>
+    <li
+      className="option"
+      onClick={[Function]}
+    >
+      movie genre
+    </li>
+  </ul>
+</div>
+`;

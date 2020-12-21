@@ -1,0 +1,51 @@
+.background {
+    background: var(--color-dark);
+    width: 100vw;
+    flex-grow: 2;
+    position: relative;
+    margin-top: 20px;
+
+    .container {
+        width: var(--content-max-width);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+
+        .menu-row {
+            min-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .separator {
+            border-top: 3px double var(--color-medium);
+            min-width: 100%;
+        }
+
+        .inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50%;
+            
+            
+            .no-movies-warn {
+                display: inline-block;
+                width: 1000px;
+                margin: 40px auto;
+                color: var(--color-contrast);
+                font-family: var(--font-main);
+                font-weight: var(--weight-light);
+                font-size: 48px;
+                line-height: 150%;
+                letter-spacing: 3px;
+                text-align: center;
+            }
+        }
+    }
+}
+

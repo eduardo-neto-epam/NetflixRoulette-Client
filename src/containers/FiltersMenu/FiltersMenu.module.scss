@@ -1,0 +1,14 @@
+.menu {
+    display: inline-flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+.filter {
+    list-style: none;
+}
+
+.filter + .filter {
+    padding-left: 20px;
+}
