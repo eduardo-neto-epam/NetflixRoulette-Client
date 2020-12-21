@@ -1,0 +1,28 @@
+.container {
+    text-align: center;
+    padding: 20px;
+
+    .warning {
+        font-family: var(--font-main);
+        font-size: 36px;
+        font-weight: 900;
+        color: var(--color-contrast);
+    }
+
+    .details {
+        text-align: left;
+
+        .error {
+            font-family: var(--font-main);
+            font-weight: 500;
+            font-size: 24px;
+            color: var(--color-primary);
+        }
+
+        .stack {
+            font-family: var(--font-main);
+            font-weight: 200;
+            color: var(--color-contrast);
+        }
+    }
+}
