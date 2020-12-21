@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;900&display=swap');
+
 html,
 body {
     margin: 0;
     padding: 0;
     height: 100%;
+}
+
+body {
+    background: var(--color-medium);
+} 
+
+* {
     box-sizing: border-box;
-    background: linear-gradient(#e98a00, #f5aa2f);
 }
