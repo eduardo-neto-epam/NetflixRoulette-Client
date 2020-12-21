@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterSelector renders correctly 1`] = `
+<label
+  className="filter"
+  htmlFor="Filter"
+>
+  Filter
+  <input
+    className="menu-filter"
+    defaultChecked={false}
+    id="Filter"
+    name="filters"
+    onChange={[Function]}
+    type="radio"
+    value="Filter"
+  />
+  <span
+    className="checkmark"
+  />
+</label>
+`;
