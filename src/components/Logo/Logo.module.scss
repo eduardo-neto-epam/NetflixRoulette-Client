@@ -1,0 +1,10 @@
+.brand {
+        font-family: var(--font-main);
+        color:  var(--color-primary);
+        font-size: 20px;
+        font-weight: var(--weight-regular);
+
+    &--bold {   
+        font-weight: var(--weight-bold);
+    }
+}
