@@ -1,0 +1,28 @@
+.form {
+    width: 100%;
+    background: transparent;
+
+
+    &-heading {
+        font-family: var(--font-main);
+        font-size: 48px;
+        font-weight: 200;
+        color: var(--color-contrast);
+    }
+
+    > div {
+       width: 100%;
+       margin-top: 20px;
+    }
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px;
+
+    &-spacer {
+        width: 20px;
+    }
+}
