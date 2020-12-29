@@ -17,7 +17,8 @@ const Button = ({ children, size, style, type, handleClick }) => {
       {'btn--sm': size === 'sm'},
       {'btn--primary': style === 'primary'},
       {'btn--outline': style === 'outline'},
-      {'btn--glass': style === 'glass'}
+      {'btn--glass': style === 'glass'},
+      {'btn--disabled': style === 'disabled'}
       )} >{children}</button>
   )
 }
@@ -25,8 +26,8 @@ const Button = ({ children, size, style, type, handleClick }) => {
 Button.propTypes = {
   children: PropTypes.string,
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  style: PropTypes.oneOf(['primary', 'glass', 'outline']),
-  type: PropTypes.oneOf(['button', 'submit']),
+  style: PropTypes.oneOf(['primary', 'glass', 'outline', 'disabled']),
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
   handleClick: PropTypes.func,
 }
 
@@ -39,7 +40,7 @@ Button.defaultProps = {
     if (e.target.getAttribute('type') === 'button') {
       console.error('handleClick function must be passed as props from parent into Button')
     } else {
-      console.log('Button to submit form was clicked')
+      console.log(`Button was clicked`)
     }
   }
 }

@@ -4,6 +4,7 @@
     font-family: var(--font-main);
     font-weight: var(--weight-medium);
     font-size: 18px;
+    text-transform: uppercase;
     cursor: pointer;
 
     &--sm {
@@ -34,5 +35,11 @@
         background-color: rgba(0, 0, 0, 0.2);
         background-image: linear-gradient(rgba(255,255,255,0.1), rgba(35,35,35,0.6));
         color: var(--color-primary);
+    }
+
+    &--disabled {
+        background-color: var(--color-secondary);
+        color: var(--color-contrast);
+        pointer-events: none;
     }
 }
