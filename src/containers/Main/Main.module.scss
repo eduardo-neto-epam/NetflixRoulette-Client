@@ -4,14 +4,13 @@
     flex-grow: 2;
     position: relative;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 
     .container {
         width: var(--content-max-width);
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100%;
+        margin: 0 auto;
+        flex-grow: 2;
 
         .menu-row {
             min-width: 100%;
