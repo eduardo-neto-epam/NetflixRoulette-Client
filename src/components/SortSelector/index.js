@@ -16,7 +16,6 @@ const SortSelector = () => {
     ]
 
     function handleSelection(e) {
-        e.persist();
         setSelectedMethod(e.target.textContent)
         setViewOptions(prev => !prev)
     }
