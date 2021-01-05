@@ -1,0 +1,19 @@
+.count {
+    display: inline-block;
+    font-family: var(--font-main);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--color-contrast);
+    padding: 20px 0;
+}
+
+.text {
+    display: inline-block;
+    font-family: var(--font-main);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color-contrast);
+    padding: 20px 0;
+    padding-left: 10px;
+    margin: 0;
+}

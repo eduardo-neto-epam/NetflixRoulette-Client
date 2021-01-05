@@ -1,0 +1,23 @@
+.container {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(rgba(255,255,255,0.1), rgba(35,35,35,0.6));
+    box-shadow: 0px 4px 4px #000000;
+    cursor: pointer;
+    
+    .dot {
+        width: 5px;
+        height: 5px;
+        border: 0;
+        border-radius: 50%;
+        background: var(--color-contrast)
+    }
+}

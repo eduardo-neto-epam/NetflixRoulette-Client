@@ -1,0 +1,29 @@
+.container {
+    width: 200px;
+    background: var(--color-dark);
+    height: 150px;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0, 4px, 4px, #000000;
+    font-family: var(--font-main);
+    color: var(--color-contrast);
+    font-size: 18px;
+    font-weight: 500;
+
+    .close-icon {
+        text-align: right;
+        padding: 16px;
+        cursor: pointer;
+    }
+
+    .option {
+        padding: 8px 16px;
+        text-align: left;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-primary)
+        }
+    }
+
+}
