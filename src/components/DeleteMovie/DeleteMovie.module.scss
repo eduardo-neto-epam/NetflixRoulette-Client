@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+
+    .heading {
+        font-family: var(--font-main);
+        color: var(--color-contrast);
+        font-size: 48px;
+        font-weight: 200;
+        letter-spacing: 1.2;
+        margin: 20px 0;
+        text-transform: uppercase;
+    }
+    .sub-heading {
+        font-family: var(--font-main);
+        color: var(--color-contrast);
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 1.4;
+    }
+    .btn-area {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px 0;
+    }
+}

@@ -4,14 +4,13 @@
     flex-grow: 2;
     position: relative;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 
     .container {
         width: var(--content-max-width);
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100%;
+        margin: 0 auto;
+        flex-grow: 2;
 
         .menu-row {
             min-width: 100%;
@@ -19,10 +18,11 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
+            z-index: 20;
         }
 
         .separator {
-            border-top: 3px double var(--color-medium);
+            border-top: 2px double var(--color-medium);
             min-width: 100%;
         }
 
@@ -46,6 +46,19 @@
                 text-align: center;
             }
         }
+
+        .inner-display {
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+        }
     }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
