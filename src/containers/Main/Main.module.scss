@@ -18,10 +18,11 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
+            z-index: 20;
         }
 
         .separator {
-            border-top: 3px double var(--color-medium);
+            border-top: 2px double var(--color-medium);
             min-width: 100%;
         }
 
@@ -45,6 +46,19 @@
                 text-align: center;
             }
         }
+
+        .inner-display {
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+        }
     }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 

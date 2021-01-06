@@ -1,24 +1,24 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import styled, { keyframes } from "styled-components";
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
+import ReactDOM from 'react-dom';
+import styled, { keyframes } from 'styled-components';
 
-export function Modal({ onClose, children, ...props }) {
-
+export default function Modal({ onClose, children, ...props }) {
   const modalNode = document.getElementById('modal');
 
   return modalNode
-            ? ReactDOM.createPortal(
-                <Container>
-                    <Overlay>
-                    <Dialog {...props}>
-                        <Button onClick={onClose}>X</Button>
-                        {children}
-                    </Dialog>
-                    </Overlay>
-                </Container>,
-                modalNode
-            )
-            : null;
+    ? ReactDOM.createPortal(
+      <Container>
+        <Overlay>
+          <Dialog {...props}>
+            <Button onClick={onClose}>X</Button>
+            {children}
+          </Dialog>
+        </Overlay>
+      </Container>,
+      modalNode,
+    )
+    : null;
 }
 
 const fadeIn = keyframes`from { opacity: 0; }`;
@@ -43,10 +43,10 @@ const Dialog = styled.div`
   border-radius: 5px;
   padding: 20px;
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
-  width: 70%;
-  transform: translate(-50%, -50%);
+  width: 50%;
+  transform: translate(-50%);
   z-index: 1;
   display: flex;
   flex-direction: column;
