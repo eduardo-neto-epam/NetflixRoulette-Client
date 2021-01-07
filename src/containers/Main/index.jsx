@@ -9,6 +9,7 @@ import SortSelector from '../../components/SortSelector/index.jsx';
 import Footer from '../Footer/index.jsx';
 import Counter from '../../components/Counter/index.jsx';
 import ErrorBoundary from '../../components/ErrorBoundary/index.jsx';
+/* eslint import/no-cycle: [2, { maxDepth: 1 }] */
 import CardMovie from '../CardMovie/index.jsx';
 
 import DummyData from '../../dummyData/index.json';
@@ -72,6 +73,8 @@ const Main = () => {
                   imageSrc={movie.poster_path}
                   imageAlt={`Poster for movie ${movie.title}`}
                   movieTittle={movie.title}
+                  movieRating={movie.vote_average}
+                  movieTagline={movie.tagline}
                   movieReleaseDate={movie.release_date}
                   movieGenres={movie.genres}
                   movieOverview={movie.overview}

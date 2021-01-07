@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
 import styles from './CardMovie.module.scss';
+/* eslint import/no-cycle: [2, { maxDepth: 1 }] */
+import { MovieDetailsContext } from '../../App.jsx';
 
 import CardMovieImage from '../../components/CardMovieImage/index.jsx';
 import CardMovieTitle from '../../components/CardMovieTitle/index.jsx';
@@ -21,18 +23,51 @@ const CardMovie = ({
   imageSrc,
   imageAlt,
   movieTittle,
+  movieRating,
+  movieTagline,
   movieReleaseDate,
   movieGenres,
   movieOverview,
   movieRuntime,
 }) => {
+  const { dispatch } = useContext(MovieDetailsContext);
+  // const { movieData, dataDispatch } = useContext(MovieDataContext);
   const [showMenu, setShowMenu] = useState(false);
   const [showMenuButton, setShowMenuButton] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
+  function loadMovieDetails() {
+    dispatch({
+      type: 'SHOW_DETAILS',
+      payload: {
+        movieID,
+        imageSrc,
+        imageAlt,
+        movieTittle,
+        movieRating,
+        movieTagline,
+        movieReleaseDate,
+        movieGenres,
+        movieOverview,
+        movieRuntime,
+      },
+    });
+  }
+
+  function handleKeyPress(e) {
+    if (e.key === 'Enter') {
+      loadMovieDetails();
+    }
+  }
+
   function handleMenuButtonVisibility() {
     setShowMenuButton(!showMenuButton);
+  }
+
+  function handleMenuButtonClick(e) {
+    e.stopPropagation();
+    setShowMenu(!showMenu);
   }
 
   function closeEditModal() {
@@ -67,6 +102,11 @@ const CardMovie = ({
       className={cx('card', 'card-container')}
       onMouseEnter={handleMenuButtonVisibility}
       onMouseLeave={handleMenuButtonVisibility}
+      onClick={loadMovieDetails}
+      role="button"
+      tabIndex="0"
+      onKeyPress={handleKeyPress}
+      id={movieID}
     >
       <CardMovieImage src={imageSrc} alt={imageAlt} />
       <div className={cx('card-details')}>
@@ -81,10 +121,11 @@ const CardMovie = ({
           'menu-button',
           { 'menu-button--show': showMenuButton },
         )}
-        onClick={() => { setShowMenu(!showMenu); }}
+        onClick={handleMenuButtonClick}
         onKeyPress={(e) => {
+          e.stopPropagation();
           if (e.key === 'Enter') {
-            setShowMenu(!showMenu);
+            handleMenuButtonClick(e);
           }
         }}
         role="button"
@@ -136,6 +177,8 @@ CardMovie.propTypes = {
   imageSrc: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
   movieTittle: PropTypes.string.isRequired,
+  movieRating: PropTypes.number.isRequired,
+  movieTagline: PropTypes.string.isRequired,
   movieReleaseDate: PropTypes.string.isRequired,
   movieGenres: PropTypes.arrayOf(PropTypes.string).isRequired,
   movieOverview: PropTypes.string.isRequired,
